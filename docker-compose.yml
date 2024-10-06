@@ -5,3 +5,5 @@ services:
     volumes:
       - ./images:/app/images
       - ./output:/app/output
+    ports:
+      - 8000:8000

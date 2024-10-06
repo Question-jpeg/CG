@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Анализ помех сжатых изображений</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+            h1 { text-align: center; }
+            .image-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+            .image-container { position: relative; overflow: hidden; }
+            .image-info { 
+                position: absolute; 
+                top: 0; 
+                left: 0; 
+                background: rgba(255, 255, 255, 0.8); 
+                padding: 10px; 
+                width: 100%; 
+                box-sizing: border-box;
+            }
+            img { width: 100%; height: auto; display: block; }
+        </style>
+    </head>
+    <body>
+        <h1>Анализ помех сжатых изображений</h1>
+        <input type="file" id="file-input" multiple accept=".png,.jpg,.jpeg">
+        <button id="download-btn" disabled>Скачать HTML</button>
+        <div id="result"></div>
+
+        <script>
+            const fileInput = document.getElementById('file-input');
+            const result = document.getElementById('result');
+            const downloadBtn = document.getElementById('download-btn');
+    
+            fileInput.addEventListener('change', async () => {
+                if (fileInput.files.length) {
+                    const formData = new FormData();
+                    for (let file of fileInput.files) {
+                        formData.append('files', file);
+                    }
+                    
+                    const response = await fetch('/', {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    const data = await response.json();
+                    result.innerHTML = data.html_content       
+                    downloadBtn.disabled = false             
+                }
+            });
+
+            downloadBtn.addEventListener('click', () => {
+                const html_content = `
+                    <!DOCTYPE html>
+                    <html>
+                        <head>
+                            <title>Анализ помех сжатых изображений</title>
+                            <style>
+                                body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+                                h1 { text-align: center; }
+                                .image-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+                                .image-container { position: relative; overflow: hidden; }
+                                .image-info { 
+                                    position: absolute; 
+                                    top: 0; 
+                                    left: 0; 
+                                    background: rgba(255, 255, 255, 0.8); 
+                                    padding: 10px; 
+                                    width: 100%; 
+                                    box-sizing: border-box;
+                                }
+                                img { width: 100%; height: auto; display: block; }
+                            </style>
+                        </head>
+                        <body>
+                            <h1>Анализ помех сжатых изображений</h1>
+                            ${result.innerHTML}
+                        </body>
+                    </html>`
+
+                const blob = new Blob([html_content], { type: 'text/html' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'analysis_results.html';
+                document.body.appendChild(a);
+                a.click();
+                setTimeout(() => {
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                }, 0);                
+            })
+        </script>
+    </body>
+</html>
