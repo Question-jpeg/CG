@@ -1,0 +1,327 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Анализ помех сжатых изображений</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+            h1 { text-align: center; }
+            .image-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+            .image-container { position: relative; overflow: hidden; }
+            .image-info { 
+                position: absolute; 
+                top: 0; 
+                left: 0; 
+                background: rgba(255, 255, 255, 0.8); 
+                padding: 10px; 
+                width: 100%; 
+                box-sizing: border-box;
+            }
+            img { width: 100%; height: auto; display: block; }
+        </style>
+    </head>
+    <body>
+        <h1>Анализ помех сжатых изображений</h1>
+        <div class="image-grid">
+    
+        <div class="image-container">
+            <div class="image-info">
+                <strong>8.jpg</strong><br>
+                Номер зоны: 14<br>
+                Уровень помех: 2.97%
+            </div>
+            <img src="../images/8.jpg" alt="8.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>9.jpg</strong><br>
+                Номер зоны: 10<br>
+                Уровень помех: 2.96%
+            </div>
+            <img src="../images/9.jpg" alt="9.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>14.jpg</strong><br>
+                Номер зоны: 13<br>
+                Уровень помех: 3.87%
+            </div>
+            <img src="../images/14.jpg" alt="14.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>28.jpg</strong><br>
+                Номер зоны: 13<br>
+                Уровень помех: 3.08%
+            </div>
+            <img src="../images/28.jpg" alt="28.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>29.jpg</strong><br>
+                Номер зоны: 5<br>
+                Уровень помех: 2.99%
+            </div>
+            <img src="../images/29.jpg" alt="29.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>15.jpg</strong><br>
+                Номер зоны: 7<br>
+                Уровень помех: 2.94%
+            </div>
+            <img src="../images/15.jpg" alt="15.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>17.jpg</strong><br>
+                Номер зоны: 16<br>
+                Уровень помех: 3.02%
+            </div>
+            <img src="../images/17.jpg" alt="17.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>16.jpg</strong><br>
+                Номер зоны: 11<br>
+                Уровень помех: 2.82%
+            </div>
+            <img src="../images/16.jpg" alt="16.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>12.jpg</strong><br>
+                Номер зоны: 14<br>
+                Уровень помех: 2.88%
+            </div>
+            <img src="../images/12.jpg" alt="12.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>13.jpg</strong><br>
+                Номер зоны: 10<br>
+                Уровень помех: 2.53%
+            </div>
+            <img src="../images/13.jpg" alt="13.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>11.jpg</strong><br>
+                Номер зоны: 1<br>
+                Уровень помех: 3.50%
+            </div>
+            <img src="../images/11.jpg" alt="11.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>10.jpg</strong><br>
+                Номер зоны: 15<br>
+                Уровень помех: 2.95%
+            </div>
+            <img src="../images/10.jpg" alt="10.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>21.jpg</strong><br>
+                Номер зоны: 7<br>
+                Уровень помех: 3.01%
+            </div>
+            <img src="../images/21.jpg" alt="21.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>34.jpg</strong><br>
+                Номер зоны: 11<br>
+                Уровень помех: 2.99%
+            </div>
+            <img src="../images/34.jpg" alt="34.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>20.jpg</strong><br>
+                Номер зоны: 16<br>
+                Уровень помех: 2.95%
+            </div>
+            <img src="../images/20.jpg" alt="20.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>22.jpg</strong><br>
+                Номер зоны: 16<br>
+                Уровень помех: 3.02%
+            </div>
+            <img src="../images/22.jpg" alt="22.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>23.jpg</strong><br>
+                Номер зоны: 7<br>
+                Уровень помех: 2.91%
+            </div>
+            <img src="../images/23.jpg" alt="23.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>33.jpg</strong><br>
+                Номер зоны: 6<br>
+                Уровень помех: 2.80%
+            </div>
+            <img src="../images/33.jpg" alt="33.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>27.jpg</strong><br>
+                Номер зоны: 8<br>
+                Уровень помех: 2.93%
+            </div>
+            <img src="../images/27.jpg" alt="27.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>26.jpg</strong><br>
+                Номер зоны: 13<br>
+                Уровень помех: 2.91%
+            </div>
+            <img src="../images/26.jpg" alt="26.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>32.jpg</strong><br>
+                Номер зоны: 8<br>
+                Уровень помех: 3.23%
+            </div>
+            <img src="../images/32.jpg" alt="32.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>18.jpg</strong><br>
+                Номер зоны: 8<br>
+                Уровень помех: 3.01%
+            </div>
+            <img src="../images/18.jpg" alt="18.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>24.jpg</strong><br>
+                Номер зоны: 10<br>
+                Уровень помех: 2.92%
+            </div>
+            <img src="../images/24.jpg" alt="24.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>30.jpg</strong><br>
+                Номер зоны: 13<br>
+                Уровень помех: 3.22%
+            </div>
+            <img src="../images/30.jpg" alt="30.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>31.jpg</strong><br>
+                Номер зоны: 16<br>
+                Уровень помех: 3.06%
+            </div>
+            <img src="../images/31.jpg" alt="31.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>25.jpg</strong><br>
+                Номер зоны: 3<br>
+                Уровень помех: 2.97%
+            </div>
+            <img src="../images/25.jpg" alt="25.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>19.jpg</strong><br>
+                Номер зоны: 10<br>
+                Уровень помех: 2.83%
+            </div>
+            <img src="../images/19.jpg" alt="19.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>4.jpg</strong><br>
+                Номер зоны: 13<br>
+                Уровень помех: 3.33%
+            </div>
+            <img src="../images/4.jpg" alt="4.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>5.jpg</strong><br>
+                Номер зоны: 10<br>
+                Уровень помех: 2.94%
+            </div>
+            <img src="../images/5.jpg" alt="5.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>7.jpg</strong><br>
+                Номер зоны: 10<br>
+                Уровень помех: 2.90%
+            </div>
+            <img src="../images/7.jpg" alt="7.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>6.jpg</strong><br>
+                Номер зоны: 14<br>
+                Уровень помех: 3.06%
+            </div>
+            <img src="../images/6.jpg" alt="6.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>2.jpg</strong><br>
+                Номер зоны: 5<br>
+                Уровень помех: 3.07%
+            </div>
+            <img src="../images/2.jpg" alt="2.jpg">
+        </div>
+        
+        <div class="image-container">
+            <div class="image-info">
+                <strong>3.jpg</strong><br>
+                Номер зоны: 7<br>
+                Уровень помех: 3.05%
+            </div>
+            <img src="../images/3.jpg" alt="3.jpg">
+        </div>
+        
+        </div>
+    </body>
+    </html>
+    

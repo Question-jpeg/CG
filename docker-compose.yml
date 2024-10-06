@@ -1,0 +1,7 @@
+version: '3'
+services:
+  image_analyzer:
+    build: .
+    volumes:
+      - ./images:/app/images
+      - ./output:/app/output
